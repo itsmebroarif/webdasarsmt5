@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perhitungan Volume Bangun Ruang</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Hitung Volume Bangun Ruang</h1>
+
+      <!-- Balok -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Balok</h5>
+          <form id="balokForm">
+            <div class="form-group">
+              <label for="panjangBalok">Panjang</label>
+              <input
+                type="number"
+                id="panjangBalok"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="lebarBalok">Lebar</label>
+              <input
+                type="number"
+                id="lebarBalok"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="tinggiBalok">Tinggi</label>
+              <input
+                type="number"
+                id="tinggiBalok"
+                class="form-control"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="hitungVolumeBalok()"
+            >
+              Hitung Volume
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Tabung -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Tabung</h5>
+          <form id="tabungForm">
+            <div class="form-group">
+              <label for="jejariTabung">Jejari</label>
+              <input
+                type="number"
+                id="jejariTabung"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="tinggiTabung">Tinggi</label>
+              <input
+                type="number"
+                id="tinggiTabung"
+                class="form-control"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="hitungVolumeTabung()"
+            >
+              Hitung Volume
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bola -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Bola</h5>
+          <form id="bolaForm">
+            <div class="form-group">
+              <label for="jejariBola">Jejari</label>
+              <input
+                type="number"
+                id="jejariBola"
+                class="form-control"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="hitungVolumeBola()"
+            >
+              Hitung Volume
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Prisma Segitiga -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Prisma Segitiga</h5>
+          <form id="prismaSegitigaForm">
+            <div class="form-group">
+              <label for="tinggiAlasPrisma">Tinggi Alas</label>
+              <input
+                type="number"
+                id="tinggiAlasPrisma"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="panjangAlasPrisma">Panjang Alas</label>
+              <input
+                type="number"
+                id="panjangAlasPrisma"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="tinggiPrisma">Tinggi Prisma</label>
+              <input
+                type="number"
+                id="tinggiPrisma"
+                class="form-control"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="hitungVolumePrismaSegitiga()"
+            >
+              Hitung Volume
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Kerucut -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Kerucut</h5>
+          <form id="kerucutForm">
+            <div class="form-group">
+              <label for="jejariKerucut">Jejari Alas</label>
+              <input
+                type="number"
+                id="jejariKerucut"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="tinggiKerucut">Tinggi Kerucut</label>
+              <input
+                type="number"
+                id="tinggiKerucut"
+                class="form-control"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="hitungVolumeKerucut()"
+            >
+              Hitung Volume
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

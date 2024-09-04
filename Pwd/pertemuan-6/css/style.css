@@ -1,0 +1,70 @@
+body {
+            background-color: #FFFF00; /* Latar belakang kuning */
+            color: #000000; /* Warna teks default */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #0000FF; /* Warna latar belakang biru untuk header */
+            color: #FFFFFF; /* Warna teks putih */
+            padding: 20px 0;
+            position: relative;
+        }
+        header img {
+            width: 150px; /* Ukuran gambar logo */
+            height: auto;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .form-container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF; /* Latar belakang putih untuk form */
+            border: 1px solid #000000; /* Garis hitam di sekitar form */
+            border-radius: 8px; /* Sudut membulat pada border */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Bayangan lembut */
+            text-align: left; /* Ratakan teks ke kiri dalam form */
+        }
+        .form-table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .form-row {
+            display: table-row;
+        }
+        .form-cell {
+            display: table-cell;
+            padding: 10px;
+            vertical-align: middle;
+        }
+        .form-cell label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-cell input, .form-cell textarea, .form-cell select {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form-cell textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .form-cell input[type="submit"] {
+            width: auto;
+            background-color: #0000FF; /* Latar belakang biru untuk tombol */
+            color: #FFFFFF; /* Teks putih pada tombol */
+            border: none;
+            border-radius: 5px; /* Sudut membulat pada tombol */
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+        .form-cell input[type="submit"]:hover {
+            background-color: #3333FF; /* Warna saat hover pada tombol */
+        }

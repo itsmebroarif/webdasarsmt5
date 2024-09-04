@@ -1,0 +1,47 @@
+        body {
+            background-color: #0000FF;
+            /* Warna latar belakang biru */
+            color: #FFFFFF;
+            /* Warna teks putih */
+            font-family: 'Curlz MT', cursive;
+            /* Font Curlz MT */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /* Pusatkan teks */
+        }
+
+        h1,
+        h2 {
+            font-size: 2.5em;
+            /* Ukuran font untuk judul */
+            margin: 10px 0;
+        }
+
+        .scrolling-text {
+            font-size: 2em;
+            /* Ukuran font untuk teks berjalan */
+            color: #FFFFFF;
+            /* Warna teks putih */
+            margin: 20px 0;
+        }
+
+        .menu {
+            margin: 20px 0;
+        }
+
+        .menu a {
+            color: #FFFFFF;
+            /* Warna teks putih */
+            text-decoration: none;
+            font-size: 1.5em;
+            /* Ukuran font untuk menu */
+            margin: 0 15px;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            background-color: #333333;
+            border-radius: 5px;
+        }

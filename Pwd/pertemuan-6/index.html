@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Program Studi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Universitas">
+        <h1>Universitas Indraprasta (Unindra)</h1>
+    </header>
+    
+    <div class="form-container">
+        <form>
+            <div class="form-table">
+                <!-- Nama -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="nama">Nama:</label>
+                        <input type="text" id="nama" name="nama" required />
+                    </div>
+                </div>
+
+                <!-- Jenis Kelamin -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label>Jenis Kelamin:</label>
+                        <input type="radio" id="jenis-kelamin-pria" name="jenis-kelamin" value="Pria" required />
+                        <label for="jenis-kelamin-pria">Pria</label>
+                        <input type="radio" id="jenis-kelamin-wanita" name="jenis-kelamin" value="Wanita" required />
+                        <label for="jenis-kelamin-wanita">Wanita</label>
+                    </div>
+                </div>
+
+                <!-- Tempat dan Tanggal Lahir -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="tempat-lahir">Tempat Lahir:</label>
+                        <input type="text" id="tempat-lahir" name="tempat-lahir" required />
+                    </div>
+                    <div class="form-cell">
+                        <label for="tanggal-lahir">Tanggal Lahir:</label>
+                        <input type="date" id="tanggal-lahir" name="tanggal-lahir" required />
+                    </div>
+                </div>
+
+                <!-- NPM -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="npm">NPM:</label>
+                        <input type="text" id="npm" name="npm" required />
+                    </div>
+                </div>
+
+                <!-- Fakultas -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="fakultas">Fakultas:</label>
+                        <select id="fakultas" name="fakultas" required>
+                            <option value="FTMIPA">FTMIPA</option>
+                            <option value="FTMIPS">FTMIPS</option>
+                            <option value="FBS">FBS</option>
+                            <option value="Pasca Sarjana">Pasca Sarjana</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Program Studi -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="program-studi">Program Studi:</label>
+                        <select id="program-studi" name="program-studi" required>
+                            <option value="Informatika">Informatika</option>
+                            <option value="Teknik Industri">Teknik Industri</option>
+                            <option value="Pen. Biologi">Pen. Biologi</option>
+                            <option value="Pend. Matematika">Pend. Matematika</option>
+                            <option value="Pend. Fisika">Pend. Fisika</option>
+                            <option value="Pend. Ekonomi">Pend. Ekonomi</option>
+                            <option value="Pend. Sejarah">Pend. Sejarah</option>
+                            <option value="Pend. Bhs Indonesia">Pend. Bhs Indonesia</option>
+                            <option value="Pend. Bhs Inggris">Pend. Bhs Inggris</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Kategori Buku -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label>Kategori Buku:</label>
+                        <input type="checkbox" id="kategori-pendidikan" name="kategori-buku" value="Pendidikan" />
+                        <label for="kategori-pendidikan">Pendidikan</label>
+                        <input type="checkbox" id="kategori-ilmu-sosial" name="kategori-buku" value="Ilmu Sosial" />
+                        <label for="kategori-ilmu-sosial">Ilmu Sosial</label>
+                        <input type="checkbox" id="kategori-ilmu-alam" name="kategori-buku" value="Ilmu Alam" />
+                        <label for="kategori-ilmu-alam">Ilmu Alam</label>
+                        <input type="checkbox" id="kategori-agama" name="kategori-buku" value="Agama" />
+                        <label for="kategori-agama">Agama</label>
+                        <input type="checkbox" id="kategori-budaya" name="kategori-buku" value="Budaya" />
+                        <label for="kategori-budaya">Budaya</label>
+                        <input type="checkbox" id="kategori-matematika-sains" name="kategori-buku" value="Matematika & Sains" />
+                        <label for="kategori-matematika-sains">Matematika & Sains</label>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-row">
+                    <div class="form-cell">
+                        <input type="submit" value="Kirim" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

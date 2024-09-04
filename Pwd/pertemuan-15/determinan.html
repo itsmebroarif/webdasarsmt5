@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Determinan</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Hitung Determinan</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="determinantForm">
+                    <div class="form-group">
+                        <label for="aInput">Nilai A</label>
+                        <input type="number" class="form-control" id="aInput" placeholder="Masukkan nilai A" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bInput">Nilai B</label>
+                        <input type="number" class="form-control" id="bInput" placeholder="Masukkan nilai B" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cInput">Nilai C</label>
+                        <input type="number" class="form-control" id="cInput" placeholder="Masukkan nilai C" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Hitung</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.getElementById('determinantForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var A = parseFloat(document.getElementById('aInput').value);
+            var B = parseFloat(document.getElementById('bInput').value);
+            var C = parseFloat(document.getElementById('cInput').value);
+            
+            var determinant = B * B - 4 * A * C;
+            var message = '';
+
+            if (determinant > 0) {
+                message = 'Di atas garis kurva';
+            } else if (determinant === 0) {
+                message = 'Berada di garis kurva';
+            } else {
+                message = 'Di bawah garis kurva';
+            }
+
+            Swal.fire({
+                title: 'Hasil Determinan',
+                text: 'Nilai Determinan: ' + determinant + '\n' + message,
+                icon: 'info',
+                confirmButtonText: 'OK'
+            });
+        });
+    </script>
+</body>
+</html>

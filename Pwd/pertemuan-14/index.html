@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nilai Angka</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Input Nilai Angka</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="numberForm">
+                    <div class="form-group">
+                        <label for="numberInput">Masukkan Nilai Angka</label>
+                        <input type="number" class="form-control" id="numberInput" placeholder="Masukkan angka" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Proses</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var number = parseInt(document.getElementById('numberInput').value);
+            var message = '';
+
+            if (number % 15 === 0) {
+                message = 'WEB';
+            } else if (number % 3 === 0) {
+                message = 'TI';
+            } else if (number % 5 === 0) {
+                message = 'Unindra';
+            } else {
+                message = 'Tidak memenuhi syarat.';
+            }
+
+            Swal.fire({
+                title: 'Hasil',
+                text: message,
+                icon: 'info',
+                confirmButtonText: 'OK'
+            });
+        });
+    </script>
+</body>
+</html>
